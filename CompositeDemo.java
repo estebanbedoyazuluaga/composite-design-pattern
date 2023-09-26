@@ -29,8 +29,8 @@ public class CompositeDemo {
     public static void main(String[] args) {
 
         // Creating the products
-        Box myBook = new Book("El Principito", "no me acuerdo", 29.99);
-        Box myBook2 = new Book("Lord of the Rings", "J.R.T.", 69.69);
+        Box myBook = new Book("Harry Potter and XXXX", "J.K. Rowling", 29.99);
+        Box myBook2 = new Book("Lord of the Rings", "J.R.R.T.", 69.69);
         Box myComputer = new Computer("16 GB @ 2600 Hz", "Ryzen 7", 2599.99);
         Box myComputer2 = new Computer("2 GB @ 1200 Hz", "Pentium duo", 499.99);
         Box myComputer3 = new Computer("16 GB", "M2", 2999.99);
@@ -43,7 +43,8 @@ public class CompositeDemo {
         CompositeBox alice_stuff = new CompositeBox(new Box[] { alice_books, alice_PC });
         CompositeBox bob_stuff = new CompositeBox(bob_PC);
         CompositeBox shopping_cart = new CompositeBox(new Box[] { alice_stuff, bob_stuff, livingroom_PC });
-
+        
         System.out.println("Total Price: $" + shopping_cart.calculatePrice()); // Total Price: $6199.65
+        System.out.println("Alice: $" + alice_stuff.calculatePrice()); // Total Price: $6199.65
     }
 }
